@@ -1,0 +1,23 @@
+{
+  "name": "controllercheck",
+  "version": "1.0.0",
+  "description": "Open Source Controller Testing and Calibration Tool",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "tsc && cp src/index.html dist/ && cp src/styles.css dist/ && cp -r src/images dist/",
+    "dev": "tsc --watch",
+    "serve": "python3 -m http.server 8000 --directory dist",
+    "start": "npm run build && npm run serve",
+    "clean": "rm -rf dist"
+  },
+  "keywords": ["gamepad", "controller", "calibration", "testing"],
+  "author": "selimAP",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  }
+}

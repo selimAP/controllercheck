@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controllercheck.org - Open Source Controller Testing and Calibration Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/Controller_2d.png">
+</head>
+<body>
+    <div class="main-container">
+    <div class="container">
+        <header>
+            <h1>Controllercheck.org</h1>
+            <p>Open Source Controller Testing and Calibration Tool</p>
+        </header>
+        
+        <main>
+            <div class="controller-layout">
+                
+                <div class="info-panel">
+                    <div class="controller-info">
+                        <h3>Controller Status</h3>
+                        <div class="controller-details">
+                            <div class="detail-row">
+                                <span class="label">CONNECTED</span>
+                                <span class="label">VIBRATION</span>
+                                <span class="label">VIBRATE</span>
+                            </div>
+                            <div class="detail-row values">
+                                <span id="controller-connected">No</span>
+                                <span id="controller-vibration">No</span>
+                                <button id="vibration-test" disabled>Test</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="button-status">
+                        <div class="button-grid">
+                            <div class="button-row">
+                                <div class="btn-cell"><span class="btn-label">Cross</span><span id="b0-value">0.00</span></div>
+                                <div class="btn-cell"><span class="btn-label">Circle</span><span id="b1-value">0.00</span></div>
+                                <div class="btn-cell"><span class="btn-label">Square</span><span id="b2-value">0.00</span></div>
+                                <div class="btn-cell"><span class="btn-label">Triangle</span><span id="b3-value">0.00</span></div>
+                                <div class="btn-cell"><span class="btn-label">L1</span><span id="b4-value">0.00</span></div>
+                                <div class="btn-cell"><span class="btn-label">R1</span><span id="b5-value">0.00</span></div>
+                                <div class="btn-cell"><span class="btn-label">L2</span><span id="b6-value">0.00</span></div>
+                                <div class="btn-cell"><span class="btn-label">R2</span><span id="b7-value">0.00</span></div>
+                            </div>
+                            <div class="button-row">
+                                <div class="btn-cell"><span class="btn-label">Share</span><span id="b8-value">0.00</span></div>
+                                <div class="btn-cell"><span class="btn-label">Options</span><span id="b9-value">0.00</span></div>
+                                <div class="btn-cell"><span class="btn-label">L3</span><span id="b10-value">0.00</span></div>
+                                <div class="btn-cell"><span class="btn-label">R3</span><span id="b11-value">0.00</span></div>
+                                <div class="btn-cell"><span class="btn-label">D-Up</span><span id="b12-value">0.00</span></div>
+                                <div class="btn-cell"><span class="btn-label">D-Down</span><span id="b13-value">0.00</span></div>
+                                <div class="btn-cell"><span class="btn-label">D-Left</span><span id="b14-value">0.00</span></div>
+                                <div class="btn-cell"><span class="btn-label">D-Right</span><span id="b15-value">0.00</span></div>
+                            </div>
+                            <div class="button-row">
+                                <div class="btn-cell"><span class="btn-label">PS</span><span id="b16-value">0.00</span></div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="axis-status">
+                            <div class="axis-row">
+                                <div class="axis-cell"><span class="axis-label">AXIS 0</span><span id="axis0-value">0.00787</span></div>
+                                <div class="axis-cell"><span class="axis-label">AXIS 1</span><span id="axis1-value">0.00787</span></div>
+                                <div class="axis-cell"><span class="axis-label">AXIS 2</span><span id="axis2-value">0.00787</span></div>
+                                <div class="axis-cell"><span class="axis-label">AXIS 3</span><span id="axis3-value">0.00787</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+
+                
+                <div class="visual-panel">
+
+                    <div class="controller-visual">
+                        <div class="controller-outline">
+                            <div class="trigger left-trigger" id="l2"></div>
+                            <div class="trigger right-trigger" id="r2"></div>
+                            <div class="shoulder left-shoulder" id="l1"></div>
+                            <div class="shoulder right-shoulder" id="r1"></div>
+                            <div class="controller-body">
+                                <div class="dpad">
+                                    <div class="dpad-btn" id="dpad-up"></div>
+                                    <div class="dpad-btn" id="dpad-down"></div>
+                                    <div class="dpad-btn" id="dpad-left"></div>
+                                    <div class="dpad-btn" id="dpad-right"></div>
+                                </div>
+                                <div class="face-buttons">
+                                    <div class="face-btn" id="triangle"></div>
+                                    <div class="face-btn" id="square"></div>
+                                    <div class="face-btn" id="circle"></div>
+                                    <div class="face-btn" id="cross"></div>
+                                </div>
+                                <div class="center-buttons">
+                                    <div class="center-btn" id="share"></div>
+                                    <div class="center-btn" id="options"></div>
+                                    <div class="center-btn" id="ps"></div>
+                                    <div class="center-btn" id="touchpad"></div>
+                                </div>
+
+                                <div class="controller-visual-sticks">
+                                    <div class="controller-stick-container">
+                                        <div class="controller-stick-circle">
+                                            <div class="controller-stick-dot" id="visual-left-stick"></div>
+                                        </div>
+                                    </div>
+                                    <div class="controller-stick-container">
+                                        <div class="controller-stick-circle">
+                                            <div class="controller-stick-dot" id="visual-right-stick"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    
+                    
+                    <div class="stick-visualizations">
+                        <div class="stick-container">
+                            <div class="stick-circle" id="left-stick">
+                                <div class="stick-line"></div>
+                                <div class="stick-dot"></div>
+                            </div>
+                            <div class="stick-info">Left Stick</div>
+                        </div>
+                        
+                        <div class="stick-container">
+                            <div class="stick-circle" id="right-stick">
+                                <div class="stick-line"></div>
+                                <div class="stick-dot"></div>
+                            </div>
+                            <div class="stick-info">Right Stick</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+    </div>
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+            <p>&copy; 2025 Controllercheck.org • <a href="https://github.com/selimAP/controllercheck" target="_blank" rel="noopener noreferrer">Contribute on GitHub</a></p>
+        </div>
+    </footer>
+    
+    <script type="module" src="index.js"></script>
+</body>
+</html>
+
