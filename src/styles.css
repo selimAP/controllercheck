@@ -50,7 +50,7 @@ body {
 
 header {
     text-align: center;
-    padding: 20px;
+    padding: 0px 20px 20px;
 }
 
 header h1 {
@@ -69,7 +69,7 @@ header p {
 }
 
 .main-container {
-    min-height: 100vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,7 +80,6 @@ header p {
 .container {
     display: grid;
     justify-content: center;
-
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -583,8 +582,8 @@ header p {
 }
 
 .stick-circle {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border: 1px solid #666;
     border-radius: 50%;
     position: relative;
@@ -599,7 +598,7 @@ header p {
     left: 0;
     right: 0;
     height: 1px;
-    background: #bbb; /* lighter */
+    background: #bbb;
     transform: translateY(-50%);
 }
 
@@ -610,7 +609,7 @@ header p {
     top: 0;
     bottom: 0;
     width: 1px;
-    background: #bbb; /* lighter */
+    background: #bbb;
     transform: translateX(-50%);
 }
 
@@ -619,8 +618,8 @@ header p {
 }
 
 .stick-dot {
-    width: 6px;
-    height: 6px;
+    width: 5.5px;
+    height: 5.5px;
     background: var(--controller-stick-dot);
     border: none;
     border-radius: 50%;
@@ -630,7 +629,6 @@ header p {
     transform: translate(-50%, -50%);
     transition: none;
     z-index: 2;
-    box-shadow: none;
 }
 
 .stick-circle.active .stick-dot {
@@ -641,7 +639,7 @@ header p {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 2px;
+    height: 1.3px;
     background: #666;
     transform-origin: 0 50%;
     z-index: 1;
@@ -1247,8 +1245,9 @@ header p {
 
 
 .site-footer {
+    height: 5vh;
     width: 100%;
-    padding: 24px 20px 32px;
+    padding: 0px 20px 32px;
     text-align: center;
     color: var(--text-light);
     font-size: 0.85rem;
